@@ -86,7 +86,7 @@ def get_sub_video(args, num_process, process_idx):
 
     # start modified by popo on 230318
     duration = np.floor(float(meta['duration']))
-    part_time = duration // num_process
+    part_time = args.brick_size
     # end modified by popo on 230318
     print(f'duration: {duration}, part_time: {part_time}')
     os.makedirs(osp.join(args.output, f'{args.video_name}_inp_tmp_videos'), exist_ok=True)
